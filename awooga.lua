@@ -111,6 +111,10 @@ b:Button("Atm Tp",function()
     AutoATM()
 end)
 
+b:Button("Cashout Tp",function()
+	hump.CFrame = desk.CFrame
+end)
+
 b:Box("Money Goal","number",function(value)
 	goal = tonumber(value)
 end)
