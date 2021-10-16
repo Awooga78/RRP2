@@ -115,11 +115,25 @@ b:Box("Money Goal","number",function(value)
 	goal = tonumber(value)
 end)
 
-b:Label("Made by Big Boss#3605",{
+local jobmoneyz = b:Label("Job Money: " ..tostring(job),{
     TextSize = 20; -- Self Explaining
     TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
     BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
-    
-}) 
+})
+
+b:Label("Made by Big Boss#3605",{
+    TextSize = 20; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining 
+})
 
 b:DestroyGui()
+
+
+
+spawn (function()
+	while true do
+	wait()
+	jobmoneyz:Refresh("Job Money: ".. tostring(job))
+	end
+end)
