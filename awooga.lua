@@ -91,7 +91,9 @@ local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloo
 
 local w = library:CreateWindow("RRP2 Autofarm") -- Creates the window
 
-local b = w:CreateFolder("Options") -- Creates the folder(U will put here your buttons,etc)
+local b = w:CreateFolder("Auto Stuff")-- Creates the folder(U will put here your buttons,etc)
+local c = w:CreateFolder("TPs")
+local d = w:CreateFolder("Destroy Gui")
 
 b:Toggle("Auto Clean",function(bool)
     getgenv().autoClean = bool
@@ -105,14 +107,6 @@ b:Toggle("Auto Cash Out", function(bool)
 	if bool then
 		AutoCash()
 	end
-end)
-
-b:Button("Atm Tp",function()
-    AutoATM()
-end)
-
-b:Button("Cashout Tp",function()
-	hump.CFrame = desk.CFrame
 end)
 
 b:Box("Money Goal","number",function(value)
@@ -131,9 +125,19 @@ b:Label("Made by Big Boss#3605",{
     BgColor = Color3.fromRGB(69,69,69); -- Self Explaining 
 })
 
-b:DestroyGui()
+c:Button("Atm Tp",function()
+    AutoATM()
+end)
 
+c:Button("Cashout Tp",function()
+	hump.CFrame = desk.CFrame
+end)
 
+c:Button("Abdul Tp",function()
+	hump.CFrame = abdul.CFrame
+end)
+
+d:DestroyGui()
 
 spawn (function()
 	while true do
